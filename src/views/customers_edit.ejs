@@ -1,0 +1,50 @@
+<% include partials/_header %>
+<div class="container mt-5">
+        <pre>llego</pre>
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/update/<%= data.codUsu%>" method="post" form="tipoUsuario">
+                        <h3>Actualizar datos</h3>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Nombre " value="<%= data.name %>" class="form-control-plaintext border"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="password" value="<%= data.email %>" class="form-control-plaintext border"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="pass" placeholder="direccion" value="<%= data.pass %>" class="form-control-plaintext border"
+                                required>
+
+                        </div>
+                        <div class="input-group input-group-sm mb-3 ml-2">
+                                <select type="text" name="tipoUsu" placeholder="TIPO USUARIO" value="<%= data.tipoUsu %>" class="form-control-plaintext border" form="tipoUsuario">
+                                        <option  selected disabled>Tipo de  Usiario</option>    
+                                         <option value="Administrador">Administrador</option>
+                                        <option value="Usuario">Usuario</option>
+                                        <option value="Invidato">Invitado</option>
+                                      
+                                      </select>
+                                
+                        </div>
+
+                        <div class="form-group">
+                            <input type="number" name="phone" placeholder="Telefono" value="<%= data.phone %>" class="form-control-plaintext border"
+                                required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            Edit Cliente
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% include partials/_footer %>
