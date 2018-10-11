@@ -22,11 +22,11 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(morgan('dev'));
 app.use(myConnection(mysql, {
-    host: 'localhost',
-    user: 'root',
+    host: 'files.000webhost.com',
+    user: 'mycrudnodejs',
     password: '',
     port: 3306,
-    database: 'crud_session'
+    database: 'id7396225_newusuarios'
 }, 'single'));
 
 app.use(express.urlencoded({ extended: false }));
